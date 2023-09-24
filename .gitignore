@@ -41,3 +41,5 @@
 /.idea
 
 .ruby-version
+
+/config/credentials/test.key

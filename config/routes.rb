@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'quotes/new'
+  get 'quotes/edit'
+  get 'quotes/index'
+  get 'quotes/show'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  Rails.application.routes.draw do
+  get 'quotes/new'
+  get 'quotes/edit'
+  get 'quotes/index'
+  get 'quotes/show'
+    resources :quotes
+  end
 end
