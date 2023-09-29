@@ -1,23 +1,30 @@
 require "test_helper"
 
 class QuotesControllerTest < ActionDispatch::IntegrationTest
+  include Warden::Test::Helpers
+
+  def setup
+    login_as users(:accountant)
+    @quote = Quote.ordered.first;
+  end
+
   test "should get new" do
-    get quotes_new_url
+    get new_quote_url
     assert_response :success
   end
 
   test "should get edit" do
-    get quotes_edit_url
+    get edit_quote_url @quote
     assert_response :success
   end
 
   test "should get index" do
-    get quotes_index_url
+    get quotes_url
     assert_response :success
   end
 
   test "should get show" do
-    get quotes_show_url
+    get quote_url @quote
     assert_response :success
   end
 end

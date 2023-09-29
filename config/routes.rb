@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
-  get 'quotes/new'
-  get 'quotes/edit'
-  get 'quotes/index'
-  get 'quotes/show'
-
-  Rails.application.routes.draw do
-  get 'quotes/new'
-  get 'quotes/edit'
-  get 'quotes/index'
-  get 'quotes/show'
-    resources :quotes
-  end
+  root to: 'pages#home'
+  get 'home', to: 'pages#home'
+  resources :quotes
+  devise_for :users
 end
