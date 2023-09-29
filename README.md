@@ -1,24 +1,12 @@
-# README
+# Turbo Rails Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Source code from doing the [Turbo Rails Tutorial](https://www.hotrails.dev/turbo-rails).
 
-Things you may want to cover:
+## Known error
+Sadly some things of the tutorial are outdated and don't work anymore.
+Luckily there aren't many of them and i hope they get fixed in the future, as I liked the tutorial a lot.
 
-* Ruby version
+So here ist the List:
+- the devise gem now supports Turbo by default
+- when disabling turbo for the whole app you also need to add `data-turbo="false"` on the html body to disable turbo inside the turbo-frames.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
